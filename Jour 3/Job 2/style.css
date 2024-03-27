@@ -1,0 +1,8 @@
+img {
+  margin: 1px;
+}
+#container1 {
+  width: 70vw;
+  height: 60vh;
+  border: 1px solid black;
+}
