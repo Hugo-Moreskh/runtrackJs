@@ -21,3 +21,6 @@ ul.list-group {
 footer {
   height: 400px;
 }
+.jumbotron {
+  background-color: lightgrey;
+}
