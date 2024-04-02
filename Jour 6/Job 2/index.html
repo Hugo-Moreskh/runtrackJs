@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Job 1</title>
+    <title>Job 2</title>
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -31,7 +31,7 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"
+                <a class="nav-link active" aria-current="page" href="https://laplateforme.io/"
                   >Accueil</a
                 >
               </li>
@@ -71,27 +71,46 @@
               Un papillon, c'est un peu comme une chenille, mais avec des ailes.
               Ne pas ingerer.
             </p>
-            <a href="#" class="btn btn-primary"
-              >Commander votre propre papillon</a
-            >
+           <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Commander votre propre Papillon
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmez votre achat</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Confirmez-vous l'achat de votre propre magnifique papillon rien que pour vous?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">Je confirme mon achat</button>
+      </div>
+    </div>
+  </div>
+</div>
           </div>
         </div>
       </div>
       <div class="col-md-7 col-sm-12">
-        <div class="jumbotron p-5">
-          <h1 class="display-4">Bonjour, monde!</h1>
-          <p class="lead">Il existe plusieurs visions du terme:</p>
-          <p class="lead">
+        <div class="jumbotron p-5" >
+          <h1 class="display-4" >Bonjour, monde!</h1>
+          <p class="lead" >Il existe plusieurs visions du terme:</p>
+          <p class="lead" id="jumbotronText" >
             Le monde est la matière, l'espace et les phénomènes qui nous sont
             accessibles par les sens, l'expérience ou la raison.
-          </p>
-          <p class="lead">
+         <br>
             Le sens le plus courant désigne notre planète, la Terre avec ses
             habitants et son environnement plus ou moins naturel.
           </p>
           <hr class="my-4" />
           <p>Le sens étendu désigne l'univers dans son ensemble.</p>
-          <a class="btn btn-primary btn-lg" href="#" role="button">
+          <a class="btn btn-primary btn-lg" id="modifierTexte" href="#" role="button">
             Rebooter le Monde
           </a>
           <!-- Placer le spinner directement à côté du bouton -->
@@ -105,9 +124,9 @@
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="changerContenu(1); return false;">1</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="changerContenu(2); return false;">2</a></li>
+              <li class="page-item"><a class="page-link" href="#" onclick="changerContenu(3); return false;">3</a></li>
               <li class="page-item">
                 <a class="page-link" href="#" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
@@ -121,25 +140,23 @@
 
       <!-- Placez la troisième colonne à droite des deux premières colonnes -->
       <div class="col-md-2 col-sm-12">
-        <ul class="list-group">
-          <li class="list-group-item active" aria-current="true">Limbes</li>
-          <li class="list-group-item">Luxure</li>
-          <li class="list-group-item">Gourmandise</li>
-          <li class="list-group-item">Avarice</li>
-          <li class="list-group-item">Colere</li>
-          <li class="list-group-item">Heresie</li>
-          <li class="list-group-item">Violence</li>
-          <li class="list-group-item">Ruse et Tromperie</li>
-          <li class="list-group-item">Trahison</li>
-          <li class="list-group-item">Internet Explorer</li>
+        <ul class="list-group" id="listGroup">
+          <li class="list-group-item" active" aria-current="true" onclick="activerElement(this)">Limbes</li>
+          <li class="list-group-item"onclick="activerElement(this)">Luxure</li>
+          <li class="list-group-item" onclick="activerElement(this)">Gourmandise</li>
+          <li class="list-group-item" onclick="activerElement(this)">Avarice</li>
+          <li class="list-group-item" onclick="activerElement(this)">Colere</li>
+          <li class="list-group-item" onclick="activerElement(this)">Heresie</li>
+          <li class="list-group-item" onclick="activerElement(this)">Violence</li>
+          <li class="list-group-item" onclick="activerElement(this)">Ruse et Tromperie</li>
+          <li class="list-group-item" onclick="activerElement(this)">Trahison</li>
+          <li class="list-group-item" onclick="activerElement(this)">Internet Explorer</li>
         </ul>
       </div>
     </div>
 
     <footer class="container">
-
       <div class="container col-md-7">
-       
         <!-- Centrage du contenu -->
         <div class="progressBar">
           <p class="text-end"><strong>Installation de AI 9000 </strong></p>
@@ -160,6 +177,7 @@
         <div class="  col-md-5">
           <p>Recevez votre copie gratuite d'internet 2!</p>
           <div class="input-group mb-3">
+            
             <span class="input-group-text" id="basic-addon1">@</span>
             <input
               type="text"
@@ -167,14 +185,16 @@
               placeholder="Login"
               aria-label="Username"
               aria-describedby="basic-addon1"
+              id="login"
             />
           </div>
-          
+
           <div class="input-group mb-3">
             <input
               type="text"
               class="form-control"
               placeholder="Mot de passe"
+              id="mdp"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
             />
@@ -202,6 +222,7 @@
               type="text"
               class="form-control"
               aria-label="Username"
+              id="url"
               aria-describedby="basic-addon1"
             />
           </div>
@@ -232,5 +253,8 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"
-  ></script>
+  >
+   
+  
+</script>
 </html>
