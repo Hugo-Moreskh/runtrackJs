@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Job 1,2,3</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="flex items-center justify-between p-6 lg:px-8 bg-gray-800"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="#" class="-m-1.5 p-1.5">
+            <span class="sr-only">Your Company</span>
+            <img
+              class="h-8 w-auto"
+              src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="flex lg:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <a
+            href="index.html"
+            class="text-sm font-semibold leading-6 text-white"
+            >Accueil</a
+          >
+          <a
+            href="index.html"
+            class="text-sm font-semibold leading-6 text-white"
+            >Inscription</a
+          >
+          <a
+            href="index.html"
+            class="text-sm font-semibold leading-6 text-white"
+            >Connexion</a
+          >
+          <a
+            href="index.html"
+            class="text-sm font-semibold leading-6 text-white"
+            >Rechercher</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a
+            href="index.html"
+            class="text-sm font-semibold leading-6 text-white"
+            >Log in <span aria-hidden="true">&rarr;</span></a
+          >
+        </div>
+      </nav>
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="lg:hidden" role="dialog" aria-modal="true">
+        <!-- Background backdrop, show/hide based on slide-over state. -->
+        <div class="fixed inset-0 z-50"></div>
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img
+                class="h-8 w-auto"
+                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                alt=""
+              />
+            </a>
+            <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Accueil</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Inscription</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Connexion</a
+                >
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Rechercher</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="#"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Log in</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="mx-auto">
+      <div class="md:flex justify-between">
+        <div class="md:w-1/2 md:mr-20">
+          <h2 class="text-2xl font-bold mb-4">Créer un Compte</h2>
+          <form>
+            <!-- Civilité -->
+            <div class="mb-4 flex items-center">
+              <img
+                width="30px"
+                src="/Jour 8/job1.1/images/icons8-gender-50.png"
+                alt=""
+                class="mr-2"
+              />
+              <div>
+                <label class="block mb-2 font-bold" for="civilite"
+                  >Civilité:</label
+                >
+                <div class="flex items-center">
+                  <input
+                    type="radio"
+                    id="civilite_mme"
+                    name="civilite"
+                    value="Mme"
+                    class="mr-2"
+                  />
+                  <label for="civilite_mme" class="mr-4">Mme</label>
+                  <input
+                    type="radio"
+                    id="civilite_m"
+                    name="civilite"
+                    value="M"
+                    class="mr-2"
+                  />
+                  <label for="civilite_m">M</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prénom et Nom -->
+            <div class="mb-4 flex flex-col items-start">
+              <div class="flex items-center">
+                <img
+                  width="30px"
+                  src="/Jour 8/job1.1/images/icons8-account-50 (1).png"
+                  alt=""
+                  class="mr-2"
+                />
+                <label class="block mb-2 font-bold" for="prenom">Prénom:</label>
+              </div>
+
+              <input
+                type="text"
+                id="prenom"
+                name="prenom"
+                class="w-full px-4 py-2 border border-black rounded"
+                placeholder="Votre prénom"
+              />
+            </div>
+
+            <div class="mb-4 flex flex-col items-start">
+              <div class="flex items-center">
+                <img
+                  width="30px"
+                  src="/Jour 8/job1.1/images/icons8-account-50 (1).png"
+                  alt=""
+                  class="mr-2"
+                />
+                <label class="block mb-2 font-bold" for="nom">Nom:</label>
+              </div>
+
+              <input
+                type="text"
+                id="nom"
+                name="nom"
+                class="w-full px-4 py-2 border border-black rounded"
+                placeholder="Votre nom"
+              />
+            </div>
+
+            <!-- Adresse -->
+            <div class="mb-4 flex flex-col items-start">
+              <div class="flex items-center">
+                <img
+                  width="30px"
+                  src="/Jour 8/job1.1/images/icons8-address-50.png"
+                  alt=""
+                  class="mr-2"
+                />
+                <label class="block mb-2 font-bold" for="adresse"
+                  >Adresse:</label
+                >
+              </div>
+
+              <input
+                type="text"
+                id="adresse"
+                name="adresse"
+                class="w-full px-4 py-2 border border-black rounded"
+                placeholder="Votre adresse"
+              />
+            </div>
+          </form>
+        </div>
+
+        <div class="md:w-1/2 md:ml-5">
+          <!-- Adresse Email -->
+          <div class="mb-4 flex flex-col items-start">
+            <div class="flex items-center">
+              <img
+                width="30px"
+                src="/Jour 8/job1.1/images/icons8-mail-48.png"
+                alt=""
+                class="mr-2"
+              />
+              <label class="block mb-2 font-bold" for="email"
+                >Adresse Email:</label
+              >
+            </div>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="w-full px-4 py-2 border border-black rounded"
+              placeholder="exemple@domaine.com"
+            />
+          </div>
+
+          <!-- Mot de passe -->
+          <!-- Mot de passe -->
+          <div class="mb-4 flex flex-col items-start">
+            <div class="flex items-center">
+              <img
+                width="30px"
+                src="/Jour 8/job1.1/images/icons8-password-50.png"
+                alt=""
+                class="mr-2"
+              />
+              <label class="block mb-2 font-bold" for="mot_de_passe"
+                >Mot de passe:</label
+              >
+            </div>
+
+            <input
+              type="password"
+              id="mot_de_passe"
+              name="mot_de_passe"
+              class="w-full px-4 py-2 border border-black rounded"
+              placeholder="********"
+            />
+          </div>
+
+          <!-- Confirmation du mot de passe -->
+          <div class="mb-4 flex flex-col items-start">
+            <div class="flex items-center">
+              <img
+                width="30px"
+                src="/Jour 8/job1.1/images/icons8-password-50.png"
+                alt=""
+                class="mr-2"
+              />
+              <label
+                class="block mb-2 font-bold"
+                for="confirmation_mot_de_passe"
+                >Confirmer le Mot de passe:</label
+              >
+            </div>
+
+            <input
+              type="password"
+              id="confirmation_mot_de_passe"
+              name="confirmation_mot_de_passe"
+              class="w-full px-4 py-2 border border-black rounded"
+              placeholder="********"
+            />
+          </div>
+
+          <!-- Passions -->
+          <div class="mb-4 flex items-center">
+            <img
+              width="30px"
+              src="/Jour 8/job1.1/images/icons8-passion-64.png"
+              alt=""
+              class="mr-2"
+            />
+            <div class="flex flex-col items-start">
+              <p class="mb-2 font-bold">Choisissez vos Passions :</p>
+              <div class="flex items-center">
+                <input
+                  type="checkbox"
+                  id="passion_informatique"
+                  name="passions[]"
+                  value="informatique"
+                  class="mr-2"
+                />
+                <label for="passion_informatique" class="mr-4"
+                  >Informatique</label
+                >
+                <input
+                  type="checkbox"
+                  id="passion_voyages"
+                  name="passions[]"
+                  value="voyages"
+                  class="mr-2"
+                />
+                <label for="passion_voyages" class="mr-4">Voyages</label>
+                <input
+                  type="checkbox"
+                  id="passion_sport"
+                  name="passions[]"
+                  value="sport"
+                  class="mr-2"
+                />
+                <label for="passion_sport" class="mr-4">Sport</label>
+                <input
+                  type="checkbox"
+                  id="passion_lecture"
+                  name="passions[]"
+                  value="lecture"
+                  class="mr-2"
+                />
+                <label for="passion_lecture">Lecture</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bouton de validation -->
+          <button
+            type="submit"
+            class="bg-blue-500 h-5 text-black p-2 p-4 border border-black font-bold flex items-center justify-center"
+          >
+            Valider
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <br />
+    <br />
+    <footer class="bg-gray-800 text-white p-4 mt-auto">
+      <div class="flex justify-between items-center">
+        <div>
+          <h3 class="text-lg font-bold mb-2">Liens Utiles</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="index.html" class="hover:text-gray-300">Accueil</a>
+            </li>
+            <li>
+              <a href="index.html" class="hover:text-gray-300">Inscription</a>
+            </li>
+            <li>
+              <a href="index.html" class="hover:text-gray-300">Connexion</a>
+            </li>
+            <li>
+              <a href="index.html" class="hover:text-gray-300">Rechercher</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Contact</h3>
+          <p>Adresse: 123 Rue Principale</p>
+          <p>Email: contact@monsite.com</p>
+          <p>Téléphone: 0123 456 789</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2">Réseaux Sociaux</h3>
+          <ul class="flex space-x-4">
+            <li><a href="#" class="hover:text-gray-300">Facebook</a></li>
+            <li><a href="#" class="hover:text-gray-300">Twitter</a></li>
+            <li><a href="#" class="hover:text-gray-300">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="my-4 border-t border-gray-600" />
+      <p class="text-center">© 2024 Mon Site. Tous droits réservés.</p>
+    </footer>
+  </body>
+</html>
